@@ -1,0 +1,55 @@
+#通用配置
+
+
+#指定生效的环境
+#spring:
+#  profiles:
+#    active: test
+
+---
+#development
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/big_event
+    username: mydev
+    password: MySQL001
+  data:
+    redis:
+      host: localhost
+      port: 6379
+#  config:
+#    activate:
+#      on-profile: dev
+
+server:
+  port: 8088
+  servlet:
+    context-path:
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名和下划线命名自动转换
+
+---
+#production
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/big_event
+#    username: mydev
+#    password: MySQL001
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+#  config:
+#    activate:
+#      on-profile: pro
+#
+#server:
+#  port: 8088
+#  servlet:
+#    context-path:
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true #开启驼峰命名和下划线命名自动转换
